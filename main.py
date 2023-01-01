@@ -62,6 +62,13 @@ def start_screen():
     #     main_text_ay = -main_text_ay
     # main_text_vy += main_text_ay
 
+def main_game():
+    while True:
+        for event in pygame.event.get(pygame.QUIT):
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+                break
 
 
 
@@ -70,7 +77,7 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
     start_screen()
-    import platformer
+    main_game()
     surf = pygame.transform.scale(renders, screen_size)
     win.blit(surf, (0, 0))
     clock.tick(60)
