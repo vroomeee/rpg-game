@@ -1,4 +1,5 @@
-import pygame, sys
+import pygame
+import sys
 
 pygame.init()
 pygame.font.init()
@@ -69,7 +70,9 @@ def main_game():
                 pygame.quit()
                 sys.exit()
                 break
-
+    surf = pygame.transform.scale(renders, screen_size)
+    win.blit(surf, (0, 0))
+    clock.tick(60)
 
 
 while True:
